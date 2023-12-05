@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <img src="/images/IMG_2742.jpg" alt="テスト画像" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <figure>
+      <img
+        src="/images/IMG_2742.jpg"
+        alt="テスト画像"
+        id="Img_Udon"
+        title="うどん君です"
+      />
+      <figcaption>僕のうどんくん</figcaption>
+    </figure>
+
     <form>
-        <h4>けーしん大好き♡</h4>
-        <input type="text"/>
-        <button>送信</button>
+      <h4 class="ami" id="ami">けーしん大好き♡</h4>
+      <h5>そんなけいしんへのメッセージをお願いします</h5>
+      <input type="text" placeholder="例：大好き" />
+      <button type="button" id="submitFormButton">送信</button>
     </form>
     <div>
-
+      <ul></ul>
     </div>
-</body>
-<script src="/scripts/script.js"></script>
+  </body>
+  <script src="/scripts/script.js"></script>
 </html>
