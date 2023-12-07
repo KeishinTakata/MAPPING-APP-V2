@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    //これは面白いタグです。知りませんでした。
     <figure>
       <img
         src="/images/IMG_2742.jpg"
@@ -17,16 +16,31 @@
       />
       <figcaption>僕のうどんくん</figcaption>
     </figure>
-
-    <form>
-      <h4 class="ami" id="ami">けーしん大好き♡</h4>
-      <h5>そんなけいしんへのメッセージをお願いします</h5>
-      <input type="text" placeholder="例：大好き" />
+    <!-- 新規登録できるフォーム -->
+    <form id="submitForm">
+      <h4 class="ami" id="ami">新規登録</h4>
+      <h5>これまでにいった場所の情報を入力してください</h5>
+      <p>日付</p>
+      <input type="date" name="date" />
+      <p>場所の名前</p>
+      <input type="text" name="name" placeholder="例：カニ地獄" />
+      <p>URL</p>
+      <input type="text" name="url" placeholder="https://docs.github.com/ja" />
       <button type="button" id="submitFormButton">送信</button>
     </form>
+    <!-- 過去登録したものが確認できるリスト -->
     <div>
-      <ul></ul>
+      <h4 class="ami">これまで行った場所一覧</h4>
+      <table border="1" id="table">
+        <tr>
+          <th>日付</th>
+          <th>場所</th>
+          <th>URL</th>
+          <th>ボタン</th>
+        </tr>
+      </table>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/scripts/script.js"></script>
   </body>
-  <script src="/scripts/script.js"></script>
 </html>
