@@ -2,6 +2,7 @@ const table = document.getElementById("table");
 const submitForm = document.getElementById("submitForm");
 const submitFormButton = document.getElementById("submitFormButton");
 const URL = "http://localhost:5002/api/v1/places";
+const EditPage = "./edit.html";
 
 //Formからデータを取得し、新しいデータを作成
 const createNewItem = async (e) => {
@@ -92,10 +93,10 @@ const showAllItems = async () => {
       deleteButton.setAttribute("id", item._id);
       deleteButton.textContent = "削除";
       //編集ボタンの作成
-      let EditButton = document.createElement("button");
-      EditButton.setAttribute("id", item._id);
+      let EditButton = document.createElement("a");
       EditButton.textContent = "編集";
-      //【TODO】deleteButton に削除メソッドを付与する
+      EditButton.setAttribute("href", `./edit.html?id=${item._id}`);
+      //deleteButton に削除メソッドを付与する
       deleteButton.addEventListener("click", deleteItem);
 
       //各要素に必要な値を入れる
